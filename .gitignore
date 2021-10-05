@@ -29,8 +29,7 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
-lambda/codepipeline-event/dist
-lambda/codebuild-event/dist
+
 !/.projenrc.js
 /test-reports/
 junit.xml

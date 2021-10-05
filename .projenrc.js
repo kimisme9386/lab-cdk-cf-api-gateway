@@ -6,9 +6,9 @@ const {
 } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: '1.125.0',
+  cdkVersion: '1.124.0',
   cdkVersionPinning: true,
-  cdkDependencies: ['@aws-cdk/aws-s3'],
+  cdkDependencies: ['@aws-cdk/aws-s3', '@aws-cdk/aws-lambda', '@aws-solutions-constructs/aws-cloudfront-apigateway-lambda'],
   devDeps: ['@types/js-yaml@^3.12.5'],
   deps: ['js-yaml@^3.14.1'],
   eslint: true,
@@ -22,7 +22,7 @@ const project = new AwsCdkTypeScriptApp({
   description: '',
   repository: 'https://github.com/[owner]/[repo]',
   keywords: ['CodePipeline', 'CodeBuild'],
-  gitignore: ['lambda/codepipeline-event/dist', 'lambda/codebuild-event/dist'],
+  gitignore: [''],
   releaseWorkflow: false,
 });
 

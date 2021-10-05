@@ -125,7 +125,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/js-yaml @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit json-schema npm-check-updates ts-jest ts-node typescript @aws-cdk/assert @aws-cdk/aws-s3 @aws-cdk/core js-yaml"
+          "exec": "yarn upgrade @types/jest @types/js-yaml @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit json-schema npm-check-updates ts-jest ts-node typescript @aws-cdk/assert @aws-cdk/aws-lambda @aws-cdk/aws-s3 @aws-cdk/core @aws-solutions-constructs/aws-cloudfront-apigateway-lambda js-yaml"
         },
         {
           "exec": "npx projen"
@@ -235,7 +235,7 @@
           "exec": "yarn install --frozen-lockfile --check-files"
         },
         {
-          "exec": "npm i -g aws-cdk@1.125.0"
+          "exec": "npm i -g aws-cdk@1.124.0"
         }
       ]
     }

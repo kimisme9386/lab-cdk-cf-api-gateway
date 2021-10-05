@@ -35,7 +35,7 @@
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "aws-cdk": "1.125.0",
+    "aws-cdk": "1.124.0",
     "eslint": "^7.24.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -50,9 +50,11 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@aws-cdk/assert": "1.125.0",
-    "@aws-cdk/aws-s3": "1.125.0",
-    "@aws-cdk/core": "1.125.0",
+    "@aws-cdk/assert": "1.124.0",
+    "@aws-cdk/aws-lambda": "1.124.0",
+    "@aws-cdk/aws-s3": "1.124.0",
+    "@aws-cdk/core": "1.124.0",
+    "@aws-solutions-constructs/aws-cloudfront-apigateway-lambda": "1.124.0",
     "js-yaml": "^3.14.1"
   },
   "bundledDependencies": [],
