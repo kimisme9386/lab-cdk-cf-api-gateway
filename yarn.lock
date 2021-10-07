@@ -642,6 +642,19 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/region-info/-/region-info-1.124.0.tgz#541a6372b89a3385cc0cf3e2d71f1b917503be24"
   integrity sha512-v8Msal5kCv5Juscj6Dxjzx4HHiYKD3rWDLBAvaDN/V3zCNGga3s8M2aM/n7po7HLjVW333VzyuOCHBYnSrtMIg==
 
+"@aws-solutions-constructs/aws-apigateway-lambda@1.124.0":
+  version "1.124.0"
+  resolved "https://registry.yarnpkg.com/@aws-solutions-constructs/aws-apigateway-lambda/-/aws-apigateway-lambda-1.124.0.tgz#898aea1dadddeb1875bbd0c399ee2dd44dc157d0"
+  integrity sha512-0FqwvH4AqV0vzSnFtteGdzxjMLH5Og2rm9xF1pKK99I49ZftFtsrAzu5tSpZ3+6zEvAfgLbEXfzNmeMMnGh6QQ==
+  dependencies:
+    "@aws-cdk/aws-apigateway" "1.124.0"
+    "@aws-cdk/aws-iam" "1.124.0"
+    "@aws-cdk/aws-lambda" "1.124.0"
+    "@aws-cdk/aws-logs" "1.124.0"
+    "@aws-cdk/core" "1.124.0"
+    "@aws-solutions-constructs/core" "1.124.0"
+    constructs "^3.2.0"
+
 "@aws-solutions-constructs/aws-cloudfront-apigateway-lambda@1.124.0":
   version "1.124.0"
   resolved "https://registry.yarnpkg.com/@aws-solutions-constructs/aws-cloudfront-apigateway-lambda/-/aws-cloudfront-apigateway-lambda-1.124.0.tgz#5028768412e8e2a08ba8f434fd35707ae9721066"

@@ -1,5 +1,6 @@
 import * as lambda from '@aws-cdk/aws-lambda';
 import { App, Construct, Stack, StackProps, CfnOutput } from '@aws-cdk/core';
+import { ApiGatewayToLambda } from '@aws-solutions-constructs/aws-apigateway-lambda';
 import { CloudFrontToApiGatewayToLambda } from '@aws-solutions-constructs/aws-cloudfront-apigateway-lambda';
 
 export class ServerlessStack extends Stack {
@@ -24,6 +25,20 @@ export class ServerlessStack extends Stack {
   }
 }
 
+export class ServerlessOnlyApiGatewayStack extends Stack {
+  constructor(scope: Construct, id: string, props: StackProps = {}) {
+    super(scope, id, props);
+
+    new ApiGatewayToLambda(this, 'ApiGatewayToLambdaPattern', {
+      lambdaFunctionProps: {
+        runtime: lambda.Runtime.NODEJS_12_X,
+        handler: 'index.handler',
+        code: lambda.Code.fromAsset(`${__dirname}/lambda-only-api-gateway`),
+      },
+    });
+  }
+}
+
 // for development, use account/region from cdk cli
 const devEnv = {
   account: process.env.CDK_DEFAULT_ACCOUNT,
@@ -33,6 +48,6 @@ const devEnv = {
 const app = new App();
 
 new ServerlessStack(app, 'ServerlessStack', { env: devEnv });
-// new MyStack(app, 'my-stack-prod', { env: prodEnv });
+new ServerlessOnlyApiGatewayStack(app, 'ServerlessOnlyApiGatewayStack', { env: devEnv });
 
 app.synth();

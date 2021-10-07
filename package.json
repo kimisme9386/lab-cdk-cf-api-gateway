@@ -54,6 +54,7 @@
     "@aws-cdk/aws-lambda": "1.124.0",
     "@aws-cdk/aws-s3": "1.124.0",
     "@aws-cdk/core": "1.124.0",
+    "@aws-solutions-constructs/aws-apigateway-lambda": "1.124.0",
     "@aws-solutions-constructs/aws-cloudfront-apigateway-lambda": "1.124.0",
     "js-yaml": "^3.14.1"
   },
