@@ -39,15 +39,20 @@ export class ServerlessOnlyApiGatewayStack extends Stack {
   }
 }
 
-// for development, use account/region from cdk cli
+const app = new App();
+
+const devUsEastEnv = {
+  account: process.env.CDK_DEFAULT_ACCOUNT,
+  region: 'us-east-1',
+};
+
+new ServerlessStack(app, 'ServerlessStack', { env: devUsEastEnv });
+
 const devEnv = {
   account: process.env.CDK_DEFAULT_ACCOUNT,
   region: process.env.CDK_DEFAULT_REGION,
 };
 
-const app = new App();
-
-new ServerlessStack(app, 'ServerlessStack', { env: devEnv });
 new ServerlessOnlyApiGatewayStack(app, 'ServerlessOnlyApiGatewayStack', { env: devEnv });
 
 app.synth();
